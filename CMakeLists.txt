@@ -23,22 +23,26 @@ endif()
 
 ## sam2pseudo executable
 add_executable(sam2pseudo ${CMAKE_CURRENT_SOURCE_DIR}/src/sam2pseudo.cpp)
+add_executable(minimap2pseudo ${CMAKE_CURRENT_SOURCE_DIR}/src/minimap2pseudo.cpp)
 
 ## Check supported compression types
 find_package(BZip2)
 if (BZIP2_FOUND)
   include_directories(${BZIP2_INCLUDE_DIRS})
   target_link_libraries(sam2pseudo ${BZIP2_LIBRARIES})
+  target_link_libraries(minimap2pseudo ${BZIP2_LIBRARIES})
 endif()    
 find_package(LibLZMA)
 if (LIBLZMA_FOUND)
   include_directories(${LIBLZMA_INCLUDE_DIRS})
-  target_link_libraries(sam2pseudo ${LIBLZMA_LIBRARIES})
+  target_link_libraries(sam2pseudo ${BZIP2_LIBRARIES})
+  target_link_libraries(minimap2pseudo ${BZIP2_LIBRARIES})
 endif()
 find_package(ZLIB)
 if (ZLIB_FOUND)
   include_directories(${ZLIB_INCLUDE_DIRS})
   target_link_libraries(sam2pseudo ${ZLIB_LIBRARIES})
+  target_link_libraries(minimap2pseudo ${ZLIB_LIBRARIES})
 endif()
 
 ## Check dependencies and download them if not given
