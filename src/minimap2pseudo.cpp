@@ -63,9 +63,10 @@ std::vector<std::vector<bool>> ReadSam(const std::unordered_map<std::string, uns
     getline(parts, part, '\t');
     if (part.at(0) != '*' && part.size() > 1) {
       alns.back()[ref_to_id.at(part)] = true;
-    } else {
-      alns.pop_back();
     }
+    //else {
+    //  alns.pop_back();
+    //}
   }
   return alns;
 }
