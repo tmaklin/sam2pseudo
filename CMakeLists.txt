@@ -21,9 +21,13 @@ else()
   add_compile_options(-std=c++11)
 endif()
 
+include_directories(${CMAKE_SOURCE_DIR}/include)
+
 ## sam2pseudo executable
 add_executable(sam2pseudo ${CMAKE_CURRENT_SOURCE_DIR}/src/sam2pseudo.cpp)
-add_executable(minimap2pseudo ${CMAKE_CURRENT_SOURCE_DIR}/src/minimap2pseudo.cpp)
+add_executable(minimap2pseudo
+${CMAKE_CURRENT_SOURCE_DIR}/src/minimap2pseudo_exec.cpp
+${CMAKE_CURRENT_SOURCE_DIR}/src/minimap2pseudo.cpp)
 
 ## Check supported compression types
 find_package(BZip2)
