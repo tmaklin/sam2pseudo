@@ -1,11 +1,12 @@
-# longsweep
-Converting sam files and long-read alignments to pseudoalignments.
+# sam2pseudo
+Convert sam files to [Themisto](https://github.com/algbio/themisto) format pseudoalignments.
 
 ## Installation
 ### Compiling from source
 #### Requirements
 - C++11 compliant compiler
 - cmake v2.8.12 or newer
+- git
 
 #### Compilation
 Clone the repository
