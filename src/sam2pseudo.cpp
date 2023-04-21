@@ -1,6 +1,6 @@
 // MIT License
 
-// This file is a part of longsweep (https://github.com/tmaklin/longsweep)
+// This file is a part of sam2pseudo (https://github.com/tmaklin/sam2pseudo)
 // Copyright (c) 2020 Tommi Mäklin (tommi@maklin.fi)
 
 // Permission is hereby granted, free of charge, to any person obtaining a copy
